@@ -31,7 +31,7 @@ class ViewLogin(UserControl):
 
     def build(self):
 
-        linhaBtnEntrar = Row(col={'xs': 6, 'sm': 2, 'md': 3},
+        linhaBtnEntrar = Row(col={'xs': 6, 'sm': 4, 'md': 3},
                              controls=[self.btn_entrar])
         linhaImg = Row(controls=[self.imgLogin], alignment=MainAxisAlignment.CENTER)
 
