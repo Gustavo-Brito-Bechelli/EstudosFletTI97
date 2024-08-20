@@ -1,17 +1,9 @@
 class Conta:
 
-    def __init__(self, id_conta: int, id_cliente: int, saldo: float, ):
-        self.__id_cliente: int = id_cliente
-        self.__id_conta: int = id_conta
+    def __init__(self, saldo: float):
+        self.__id_cliente = 1
+        self.__id = 1
         self.__saldo = saldo
-        
-    @property
-    def id_cliente(self) -> int:
-        return self.__id_cliente
-
-    @property
-    def id_conta(self) -> int:
-        return self.__id_conta
 
     @property
     def saldo(self) -> float:
@@ -21,5 +13,23 @@ class Conta:
     def saldo(self, novoSaldo: float) -> None:
         self.__saldo = novoSaldo
 
+    def sacar(self, valor: float) -> bool:
+        """
+        esse metodo vai decrementar valores da variavel saldo
+        :param valor: float
+        :return: bool
+        """
+        if valor >= self.saldo:
+            self.saldo -= valor
+            return True
+        else:
+            return False
 
-# função para sacar e depositar
+    def depositar(self, valor: float) -> bool:
+        """
+        esse metodo vai adicionar valores na variavel saldo
+        :param valor: float
+        :return: bool
+        """
+        self.saldo += valor
+        return True

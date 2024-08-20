@@ -1,13 +1,9 @@
 class Contato:
 
-    def __init__(self, id_contato: int, telefone: str, email: str):
-        self.__id_contato: int = id_contato
+    def __init__(self, telefone: str, email: str):
+        self.__id_contato = 1
         self.__telefone: str = telefone
         self.__email: str = email
-
-    @property
-    def id_contato(self) -> int:
-        return self.__id_contato
 
     @property
     def telefone(self) -> str:

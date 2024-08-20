@@ -1,18 +1,10 @@
 class Cliente:
 
-    def __init__(self, id_cliente: int, id_contato: int, login: str, senha: str):
-        self.__id_cliente: int = id_cliente
-        self.__id_contato: int = id_contato
+    def __init__(self, login: str, senha: str):
+        self.__id_cliente = 1
+        self.__id_contato = 1
         self.__login: str = login
         self.__senha: str = senha
-
-    @property
-    def id_cliente(self) -> int:
-        return self.__id_cliente
-
-    @property
-    def id_contato(self) -> int:
-        return self.__id_contato
 
     @property
     def login(self) -> str:
